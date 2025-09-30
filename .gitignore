@@ -1,8 +1,14 @@
 # Created by https://www.toptal.com/developers/gitignore/api/python
 # Edit at https://www.toptal.com/developers/gitignore?templates=python
 
+
+###Jac 
+
+###LLM - Secret key file
+
+keys.jac
+
 ### Python ###
-# Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
