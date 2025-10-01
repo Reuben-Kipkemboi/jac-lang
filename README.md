@@ -8,6 +8,7 @@ A simple CRUD (Create, Read, Update, Delete) shopping list application built usi
 ## Table of Contents
 - [Overview](#overview)
 - [Features](#features)
+- [Installation Instructions](#installation-instructions)
 - [Project Structure](#project-structure)
 - [Results](#results)
 
@@ -23,14 +24,44 @@ This project implements a shopping list manager using Jaclang's graph-based prog
 - **Delete**: Remove items from your shopping list
 - **Data-Spatial Programming**: Uses Jac's walker-node architecture
 
+
+## Installation Instructions
+1. **Install Jaclang**:
+```bash
+pip install jaclang
+```
+
+2. **Clone or download the project files**
+
+3. **Verify installation**:
+```bash
+jac --version
+```
+
+## Usage without byLLM
+
+Run the dev shopping list manager:
+
+```bash
+jac run assignment.jac
+```
+## Usage with byLLM
+
+Run the dev shopping list manager:
+
+```bash
+jac run assignmentai.jac
+```
+
 ## Project Structure
 
 ```
 shopping-list/
 ├── assignment.jac          
-├── assignment_impl.jac      
-└── README.md 
-└── Images              
+├── assignment_impl.jac 
+├── assignmentai.jac     
+├── assignmentai_impl.jac      
+└── README.md       
 ```
 
 ### Main File (`assignment.jac`)
@@ -39,7 +70,7 @@ Contains:
 - Node definition (`ShoppingListNode`)
 - Entry point with test cases
 
-### Implementation File (`assignment_impl.jac`)
+### Implementation File (`assignment_impl.jac`) 
 Contains:
 - `start`: Welcome message
 - `add_item`: Add items to the list
@@ -47,8 +78,22 @@ Contains:
 - `view_list`: Display all items
 
 
-### Expected Output
+### Main File (`assignmentai.jac`) [Integrated with byLLM]
+Contains:
+- Walker declaration (`ShoppingList`)
+- Node definition (`ShoppingListNode`)
+- Entry point with test cases
 
+### Implementation File (`assignmentai_impl.jac`) [Integrated with byLLM]
+Contains:
+- `start`: Welcome message
+- `add_item`: Add items to the list
+- `remove_item`: Remove items from the list
+- `view_list`: Display all items
+- Fun messages Integrated via `by LLM`
+
+
+### Expected Output
 The program will:
 1. Display a welcome message
 2. Add three items (Laptop, Mac, Google Pixel)
@@ -68,6 +113,11 @@ The program will:
 ### After Implementing impl
 
 ![Welcome Message](./images/impl.png)
+
+
+### After Implementing byLLM
+
+![Welcome Message](./images/ai.png)
 
 
 
