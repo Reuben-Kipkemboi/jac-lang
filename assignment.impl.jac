@@ -1,14 +1,17 @@
-# Start
+"""Implementation file for Shopping List"""
+
+# Start - intro
 impl ShoppingList.start {
-    print("=== Shopping List Manager ===");
-    print("Use walker methods to add, remove, or view items.");
+    print("=== Dev Shopping list ===");
 }
 
 # (C - Create/Add)
 impl ShoppingList.add_item {
     if self.item_name {
         here.items.append(self.item_name);
-        print(f"Added '{self.item_name}' to your monthly shopping list.");
+        print(f"Added '{self.item_name}' to your shopping list.");
+    } else {
+        print("You haven't provided any item name.");
     }
 }
 
@@ -16,9 +19,9 @@ impl ShoppingList.add_item {
 impl ShoppingList.remove_item {
     if self.item_name in here.items {
         here.items.remove(self.item_name);
-        print(f"Removed '{self.item_name}' from your monthly shopping list.");
+        print(f"Removed '{self.item_name}' from your shopping list.");
     } else {
-        print(f"Sorry! Item '{self.item_name}' not found in your monthly list.");
+        print(f"Sorry! Item '{self.item_name}' not found in your list.");
     }
 }
 
@@ -33,3 +36,5 @@ impl ShoppingList.view_list {
         }
     }
 }
+
+
